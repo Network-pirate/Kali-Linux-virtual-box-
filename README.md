@@ -18,7 +18,7 @@ This tool automates the **complete configuration of Kali Linux**, including:
 
 ---
 
-## 🚀 One-Time Installation (YouTube-style method)
+## 🚀 One-Time Installation ( hardware limited-method)
 
 > *Use this if you just want to download and run instantly*
 
@@ -38,7 +38,7 @@ kali-setup
 
 ---
 
-## 🛠️ Your Script’s Real Process (Included Inside)
+## 🛠️  SCRIPT FOR SOFTWARE LIMITATION
 
 Once you run `kali-setup`, the following happens automatically:
 
