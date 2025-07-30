@@ -1,115 +1,94 @@
-# 🐉 Kali Linux Setup in VirtualBox
+# 🐉 Kali Linux VirtualBox Auto-Setup Tool
 
-A complete guide and resource to install **Kali Linux** in **Oracle VirtualBox** — built for beginners and cybersecurity learners.
-
-> 🔧 Perfect for ethical hackers, CTF players, and those who want a portable Kali setup.
-
----
-
-## 📦 What’s Included
-
-- ✅ Kali Linux VirtualBox ISO (latest official)
-- ✅ Recommended VM configuration
-- ✅ Step-by-step install guide (PDF/screenshots/video support coming)
-- ✅ Optional guest additions tips
-- ✅ Networking setup (NAT, Bridge, and Host-only options)
+> ⚙️ A one-click script to instantly configure Kali Linux with all essential tools.  
+> Designed for VirtualBox, fresh Kali installs, and ethical hacking learners.
 
 ---
 
-## 🚀 Installation Steps
+## 🎯 Purpose
 
-> 📌 You must have **VirtualBox** installed on your PC  
-> Get it from: [https://www.virtualbox.org/](https://www.virtualbox.org/)
+This tool automates the **first-time setup** of Kali Linux, saving hours of manual work.  
+It installs a wide range of tools used in ethical hacking, CTFs, and cybersecurity research.
 
----
-
-### 1. 📥 Download Kali ISO
-
-Get the latest version of Kali from:
-```
-https://www.kali.org/get-kali/
-```
-
-Choose:  
-- 🔘 Installer (for full disk install)  
-- Or: Live version (for testing without install)
+Ideal for:
+- ✅ Beginners learning Kali
+- ✅ Ethical hackers
+- ✅ Students running Kali on VirtualBox or dual boot
 
 ---
 
-### 2. 💻 Create a New Virtual Machine
+## 🚀 Quick Start (Full Installation)
 
-Open VirtualBox and:
-
-- Name: `Kali Linux`
-- Type: `Linux`
-- Version: `Debian (64-bit)`
-- RAM: At least `2048 MB` (recommend 4096 MB)
-- Disk: `Virtual Disk Image (VDI)` > Dynamically allocated > At least `20 GB`
-
----
-
-### 3. 🔗 Attach the Kali ISO
-
-- Go to Settings > Storage
-- Click the empty disk > Choose the downloaded `.iso`
-- Boot the VM
-
----
-
-### 4. 🧙 Follow Kali Installer Steps
-
-- Select language & region
-- Set up username & password
-- Partition disk > Guided - use entire disk
-- Wait for installation to complete
-
----
-
-### 5. ✨ Optional (Guest Additions)
-
-To enable full-screen, clipboard sharing, and better performance:
-
-Inside Kali terminal:
+Use this to instantly install the script globally and make it executable:
 
 ```bash
-sudo apt update
-sudo apt install -y virtualbox-guest-x11
-reboot
+# 📥 Download the setup script
+wget https://raw.githubusercontent.com/Network-pirate/Kali-Linux-virtual-box-/main/Kali-Linux.sh -O kali-setup
+
+# 🔐 Make it executable
+chmod +x kali-setup
+
+# 📁 Move to system path for global use
+sudo mv kali-setup /usr/local/bin/kali-setup
+
+# ▶️ Run the tool anytime
+kali-setup
 ```
+
+✅ *No need to clone the repo manually — everything runs with one command.*
 
 ---
 
-## 🧠 Tips
+## 🧰 What This Script Does
 
-- Use NAT networking for internet access
-- Use Bridge networking for full LAN access
-- Snapshots are helpful before risky experiments
-- Update tools after install:  
-```bash
-sudo apt update && sudo apt upgrade
-```
+Your script:
+
+- Installs all major hacking tools automatically
+- Configures Kali Linux for practical use
+- Sets up environment with no user interaction
 
 ---
 
-## 📸 Screenshots (Coming Soon)
+## 🔧 Tools It Installs
 
-I'll be adding screenshots for every step, or even a video guide in the future.
+| Category            | Tools                                                   |
+|---------------------|----------------------------------------------------------|
+| Network Scanners    | `nmap`, `net-tools`, `whois`, `traceroute`, `dnsutils`  |
+| Exploitation        | `metasploit-framework`, `sqlmap`, `hydra`, `john`       |
+| Wireless Hacking    | `aircrack-ng`, `reaver`                                  |
+| Web Tools           | `nikto`, `curl`, `wget`                                  |
+| System & Utility    | `neofetch`, `htop`, `figlet`, `lolcat`                   |
+
+---
+
+## 🔁 Inspired Process (From YouTube Scripts)
+
+This script follows a professional Linux deployment process:
+
+1. 📥 Downloads the main `.sh` file from GitHub  
+2. 🔐 Grants execute permission using `chmod +x`  
+3. 📦 Moves it to `/usr/local/bin` for system-wide usage  
+4. 🧼 Cleans up temporary files (if added)
+
+This allows the tool to be run by simply typing `kali-setup` — just like any official command.
 
 ---
 
 ## 🛡️ Disclaimer
 
-This guide is for **educational and ethical use only**.  
-You are responsible for how you use your Kali Linux VM.
+> This tool is for **educational and ethical use only**.  
+> The author is **not responsible** for misuse or illegal activity.
 
 ---
 
-## 👤 Author
+## 👨‍💻 Author
 
-- GitHub: [Network-pirate](https://github.com/Network-pirate)
-- Developer: **Tawhed**
-- Other Projects: [Codex IP Changer](https://github.com/Network-pirate/codex-ip-changer), [CC-KILLER](https://github.com/Network-pirate/CC-KILLER)
+**Tawhed** – [@Network-pirate](https://github.com/Network-pirate)
+
+🔗 Other Projects:
+- [🛰️ Codex IP Changer (Linux + Termux)](https://github.com/Network-pirate/codex-ip-changer)
+- [💳 CC-KILLER](https://github.com/Network-pirate/CC-KILLER)
 
 ---
 
-## ❤️ Made for learning and cybersecurity research
+## ❤️ Made with passion for hackers & students
