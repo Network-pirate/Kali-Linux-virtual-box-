@@ -1,94 +1,102 @@
 # 🐉 Kali Linux VirtualBox Auto-Setup Tool
 
-> ⚙️ A one-click script to instantly configure Kali Linux with all essential tools.  
-> Designed for VirtualBox, fresh Kali installs, and ethical hacking learners.
+> ⚙️ One-script solution to fully set up a hacking-ready Kali Linux.  
+> Installs tools, handles pip dependencies, and makes everything ready out of the box.  
+> Ideal for students, bug bounty hunters, ethical hackers.
 
 ---
 
-## 🎯 Purpose
+## 🎯 What This Tool Does
 
-This tool automates the **first-time setup** of Kali Linux, saving hours of manual work.  
-It installs a wide range of tools used in ethical hacking, CTFs, and cybersecurity research.
+This tool automates the **complete configuration of Kali Linux**, including:
 
-Ideal for:
-- ✅ Beginners learning Kali
-- ✅ Ethical hackers
-- ✅ Students running Kali on VirtualBox or dual boot
+- 📦 Installs all essential tools (A–Z)
+- ⚙️ Handles broken dependencies
+- 🧠 Auto-installs `requirements.txt` for Python tools
+- ❌ No need to manually `git clone` any tool
+- 🚀 One command sets up your entire environment
 
 ---
 
-## 🚀 Quick Start (Full Installation)
+## 🚀 One-Time Installation (YouTube-style method)
 
-Use this to instantly install the script globally and make it executable:
+> *Use this if you just want to download and run instantly*
 
 ```bash
-# 📥 Download the setup script
+# 📥 Step 1: Download the script
 wget https://raw.githubusercontent.com/Network-pirate/Kali-Linux-virtual-box-/main/Kali-Linux.sh -O kali-setup
 
-# 🔐 Make it executable
+# 🔐 Step 2: Make it executable
 chmod +x kali-setup
 
-# 📁 Move to system path for global use
+# 📁 Step 3: Move it globally to use anywhere
 sudo mv kali-setup /usr/local/bin/kali-setup
 
-# ▶️ Run the tool anytime
+# ▶️ Step 4: Run the tool anytime with:
 kali-setup
 ```
 
-✅ *No need to clone the repo manually — everything runs with one command.*
+---
+
+## 🛠️ Your Script’s Real Process (Included Inside)
+
+Once you run `kali-setup`, the following happens automatically:
+
+| ✅ Step                           | 📝 Description |
+|----------------------------------|----------------|
+| `apt update && apt upgrade`     | Updates your Kali system |
+| Installs A–Z tools              | Covers all categories: network, web, brute-force, recon, and wireless |
+| Fixes broken packages           | Uses fallback strategies if any package fails |
+| Installs pip & Python3 modules  | Auto-installs Python dependencies from `requirements.txt` |
+| Avoids repeated installs        | Skips tools if already installed |
+| Adds utilities like `figlet`, `lolcat`, `htop` | Improves visual output and monitoring |
 
 ---
 
-## 🧰 What This Script Does
+## 🔧 Tools Included
 
-Your script:
-
-- Installs all major hacking tools automatically
-- Configures Kali Linux for practical use
-- Sets up environment with no user interaction
-
----
-
-## 🔧 Tools It Installs
-
-| Category            | Tools                                                   |
-|---------------------|----------------------------------------------------------|
-| Network Scanners    | `nmap`, `net-tools`, `whois`, `traceroute`, `dnsutils`  |
-| Exploitation        | `metasploit-framework`, `sqlmap`, `hydra`, `john`       |
-| Wireless Hacking    | `aircrack-ng`, `reaver`                                  |
-| Web Tools           | `nikto`, `curl`, `wget`                                  |
-| System & Utility    | `neofetch`, `htop`, `figlet`, `lolcat`                   |
+| Category         | Tools |
+|------------------|-----------------------------|
+| Network Tools    | `nmap`, `whois`, `traceroute`, `net-tools` |
+| Exploitation     | `metasploit-framework`, `hydra`, `sqlmap`, `john` |
+| Wireless Attacks | `aircrack-ng`, `reaver`, `wash` |
+| Web Recon        | `nikto`, `dnsutils`, `curl`, `wget` |
+| Utility Tools    | `neofetch`, `htop`, `figlet`, `lolcat`, `python3`, `pip` |
 
 ---
 
-## 🔁 Inspired Process (From YouTube Scripts)
+## 💡 Why This Script Is Unique
 
-This script follows a professional Linux deployment process:
+Unlike most scripts or YouTube tutorials:
 
-1. 📥 Downloads the main `.sh` file from GitHub  
-2. 🔐 Grants execute permission using `chmod +x`  
-3. 📦 Moves it to `/usr/local/bin` for system-wide usage  
-4. 🧼 Cleans up temporary files (if added)
+- ✅ You don’t need to manually `git clone` tools
+- ✅ You don’t manually run `pip install` — it auto-detects and installs
+- ✅ It skips anything that’s already installed
+- ✅ Works even if packages are broken or missing
 
-This allows the tool to be run by simply typing `kali-setup` — just like any official command.
+---
+
+## 📸 Screenshots (Coming Soon)
+
+> We'll include visual examples of how the output looks once all tools are installed.
 
 ---
 
 ## 🛡️ Disclaimer
 
-> This tool is for **educational and ethical use only**.  
-> The author is **not responsible** for misuse or illegal activity.
+This tool is for **educational and ethical purposes only**.  
+Using any of the installed tools for illegal or unauthorized access is strictly prohibited.
 
 ---
 
-## 👨‍💻 Author
+## 👤 Author
 
 **Tawhed** – [@Network-pirate](https://github.com/Network-pirate)
 
-🔗 Other Projects:
+🔗 Other Tools:
 - [🛰️ Codex IP Changer (Linux + Termux)](https://github.com/Network-pirate/codex-ip-changer)
-- [💳 CC-KILLER](https://github.com/Network-pirate/CC-KILLER)
+- [💳 CC-KILLER (Stripe, PayPal, Authorize, etc.)](https://github.com/Network-pirate/CC-KILLER)
 
 ---
 
-## ❤️ Made with passion for hackers & students
+## ❤️ Made for learners, hackers, and the cybersecurity community
